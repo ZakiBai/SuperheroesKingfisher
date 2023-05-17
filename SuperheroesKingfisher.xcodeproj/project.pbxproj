@@ -9,21 +9,26 @@
 /* Begin PBXBuildFile section */
 		3541B7542A153B0800C671F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541B7532A153B0800C671F2 /* AppDelegate.swift */; };
 		3541B7562A153B0800C671F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541B7552A153B0800C671F2 /* SceneDelegate.swift */; };
-		3541B7582A153B0800C671F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541B7572A153B0800C671F2 /* ViewController.swift */; };
 		3541B75B2A153B0800C671F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3541B7592A153B0800C671F2 /* Main.storyboard */; };
 		3541B75D2A153B0A00C671F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3541B75C2A153B0A00C671F2 /* Assets.xcassets */; };
 		3541B7602A153B0A00C671F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3541B75E2A153B0A00C671F2 /* LaunchScreen.storyboard */; };
+		3541B7692A153B7D00C671F2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3541B7682A153B7D00C671F2 /* Kingfisher */; };
+		3541B76F2A1540CD00C671F2 /* MainCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541B76E2A1540CD00C671F2 /* MainCollectionViewController.swift */; };
+		3541B7712A1540EC00C671F2 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541B7702A1540EC00C671F2 /* HeroCell.swift */; };
+		3541B7742A1542F200C671F2 /* Superhero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3541B7732A1542F200C671F2 /* Superhero.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3541B7502A153B0800C671F2 /* SuperheroesKingfisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperheroesKingfisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3541B7532A153B0800C671F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3541B7552A153B0800C671F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3541B7572A153B0800C671F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3541B75A2A153B0800C671F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3541B75C2A153B0A00C671F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3541B75F2A153B0A00C671F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3541B7612A153B0B00C671F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3541B76E2A1540CD00C671F2 /* MainCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCollectionViewController.swift; sourceTree = "<group>"; };
+		3541B7702A1540EC00C671F2 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		3541B7732A1542F200C671F2 /* Superhero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Superhero.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3541B7692A153B7D00C671F2 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +62,65 @@
 		3541B7522A153B0800C671F2 /* SuperheroesKingfisher */ = {
 			isa = PBXGroup;
 			children = (
-				3541B7532A153B0800C671F2 /* AppDelegate.swift */,
-				3541B7552A153B0800C671F2 /* SceneDelegate.swift */,
-				3541B7572A153B0800C671F2 /* ViewController.swift */,
-				3541B7592A153B0800C671F2 /* Main.storyboard */,
-				3541B75C2A153B0A00C671F2 /* Assets.xcassets */,
-				3541B75E2A153B0A00C671F2 /* LaunchScreen.storyboard */,
-				3541B7612A153B0B00C671F2 /* Info.plist */,
+				3541B76A2A153B9100C671F2 /* App */,
+				3541B76B2A153B9B00C671F2 /* ViewControllers */,
+				3541B76C2A153BA600C671F2 /* Storyboards */,
+				3541B76D2A153BB300C671F2 /* Resources */,
+				3541B7722A1540F000C671F2 /* Views */,
+				3541B7752A15430500C671F2 /* Models */,
 			);
 			path = SuperheroesKingfisher;
+			sourceTree = "<group>";
+		};
+		3541B76A2A153B9100C671F2 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3541B7532A153B0800C671F2 /* AppDelegate.swift */,
+				3541B7552A153B0800C671F2 /* SceneDelegate.swift */,
+				3541B7612A153B0B00C671F2 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3541B76B2A153B9B00C671F2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3541B76E2A1540CD00C671F2 /* MainCollectionViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3541B76C2A153BA600C671F2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3541B7592A153B0800C671F2 /* Main.storyboard */,
+				3541B75E2A153B0A00C671F2 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3541B76D2A153BB300C671F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3541B75C2A153B0A00C671F2 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3541B7722A1540F000C671F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3541B7702A1540EC00C671F2 /* HeroCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		3541B7752A15430500C671F2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3541B7732A1542F200C671F2 /* Superhero.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +139,9 @@
 			dependencies = (
 			);
 			name = SuperheroesKingfisher;
+			packageProductDependencies = (
+				3541B7682A153B7D00C671F2 /* Kingfisher */,
+			);
 			productName = SuperheroesKingfisher;
 			productReference = 3541B7502A153B0800C671F2 /* SuperheroesKingfisher.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +170,9 @@
 				Base,
 			);
 			mainGroup = 3541B7472A153B0800C671F2;
+			packageReferences = (
+				3541B7672A153B7D00C671F2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 3541B7512A153B0800C671F2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +200,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3541B7582A153B0800C671F2 /* ViewController.swift in Sources */,
+				3541B76F2A1540CD00C671F2 /* MainCollectionViewController.swift in Sources */,
 				3541B7542A153B0800C671F2 /* AppDelegate.swift in Sources */,
+				3541B7742A1542F200C671F2 /* Superhero.swift in Sources */,
 				3541B7562A153B0800C671F2 /* SceneDelegate.swift in Sources */,
+				3541B7712A1540EC00C671F2 /* HeroCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XZW4VA4NWF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SuperheroesKingfisher/Info.plist;
+				INFOPLIST_FILE = SuperheroesKingfisher/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -302,9 +366,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kz.zaki.SuperheroesKingfisher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +384,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XZW4VA4NWF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SuperheroesKingfisher/Info.plist;
+				INFOPLIST_FILE = SuperheroesKingfisher/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -330,9 +397,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kz.zaki.SuperheroesKingfisher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3541B7672A153B7D00C671F2 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3541B7682A153B7D00C671F2 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3541B7672A153B7D00C671F2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3541B7482A153B0800C671F2 /* Project object */;
 }

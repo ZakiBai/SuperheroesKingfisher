@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rti-EB-RP7">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--FIND YOUR HERO-->
+        <scene sceneID="1WC-9T-fzO">
+            <objects>
+                <collectionViewController id="weg-IT-zy8" customClass="MainCollectionViewController" customModule="SuperheroesKingfisher" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="U9X-mI-Yhq">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="10" id="leF-vh-dFE">
+                            <size key="itemSize" width="150" height="207"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="30" minY="30" maxX="30" maxY="30"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="heroCell" id="Z5L-Da-CzH" customClass="HeroCell" customModule="SuperheroesKingfisher" customModuleProvider="target">
+                                <rect key="frame" x="30" y="30" width="150" height="207"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="ed8-Za-6NJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="207"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hero Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pqx-Y0-26d">
+                                            <rect key="frame" x="0.0" y="186" width="150" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="L00-TU-6ck">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="186"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Pqx-Y0-26d" secondAttribute="trailing" id="CKY-1m-ISX"/>
+                                        <constraint firstItem="Pqx-Y0-26d" firstAttribute="top" secondItem="L00-TU-6ck" secondAttribute="bottom" id="NyU-0x-bmO"/>
+                                        <constraint firstItem="L00-TU-6ck" firstAttribute="top" secondItem="ed8-Za-6NJ" secondAttribute="top" id="chF-i8-iz2"/>
+                                        <constraint firstAttribute="bottom" secondItem="Pqx-Y0-26d" secondAttribute="bottom" id="g9p-Cf-1B6"/>
+                                        <constraint firstItem="Pqx-Y0-26d" firstAttribute="leading" secondItem="ed8-Za-6NJ" secondAttribute="leading" id="loL-4w-aM8"/>
+                                        <constraint firstAttribute="trailing" secondItem="L00-TU-6ck" secondAttribute="trailing" id="ulh-2b-xGn"/>
+                                        <constraint firstItem="L00-TU-6ck" firstAttribute="leading" secondItem="ed8-Za-6NJ" secondAttribute="leading" id="zss-FH-Xhx"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="150" height="207"/>
+                                <connections>
+                                    <outlet property="heroImage" destination="L00-TU-6ck" id="xxv-PG-Nxx"/>
+                                    <outlet property="heroName" destination="Pqx-Y0-26d" id="TLN-Fb-vVH"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="weg-IT-zy8" id="QKx-u5-gsN"/>
+                            <outlet property="delegate" destination="weg-IT-zy8" id="Cji-KM-N3d"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="FIND YOUR HERO" id="JtI-TU-2TW">
+                        <barButtonItem key="rightBarButtonItem" systemItem="trash" id="PyC-cy-9Z9">
+                            <connections>
+                                <action selector="clearCacheButtonTapped:" destination="weg-IT-zy8" id="VWM-3G-OVo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YPI-jT-yBc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1727.4809160305342" y="-2.1126760563380285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Fle-jU-sOK">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rti-EB-RP7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IB6-pA-2OH">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemRedColor"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="weg-IT-zy8" kind="relationship" relationship="rootViewController" id="NDY-lR-bzd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cSv-tN-xxr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.76335877862596" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
