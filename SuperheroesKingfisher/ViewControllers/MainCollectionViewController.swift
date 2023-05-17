@@ -20,9 +20,12 @@ final class MainCollectionViewController: UICollectionViewController {
 
 
     @IBAction func clearCacheButtonTapped(_ sender: UIBarButtonItem) {
-        
+        let cache = ImageCache.default
+        cache.clearMemoryCache()
+        cache.clearDiskCache {
+            print("Done")
+        }
     }
-    
     
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
