@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Superhero {
+struct Superhero: Decodable {
     let id: Int
     let name, slug: String
     let powerstats: Powerstats
@@ -18,45 +18,46 @@ struct Superhero {
     let images: Images
 }
 
-struct Powerstats {
+struct Powerstats: Decodable {
     let intelligence, strength, speed, durability, power, combat: Int
 }
 
-struct Appearance {
+struct Appearance: Decodable {
     let gender: Gender
-    let race: String
+    let race: String?
     let height: [String]
-    let wright: [String]
+    let weight: [String]
     let eyeColor, hairColor: String
 }
 
-enum Gender: String {
+enum Gender: String, Decodable {
     case male = "Male"
     case female = "Female"
     case empty = "-"
 }
-struct Biography {
+struct Biography: Decodable {
     let fullName, alterEgos: String
     let aliases: [String]
-    let placeOfBirth, firstAppearance, publisher: String
+    let placeOfBirth, firstAppearance: String 
+    let publisher: String?
     let alignment: Alignment
 }
 
-enum Alignment: String {
+enum Alignment: String, Decodable {
     case bad = "bad"
     case good = "good"
     case empty = "-"
     case neutral = "neutral"
 }
 
-struct Work {
+struct Work: Decodable {
     let occupation, base: String
 }
 
-struct Connections {
+struct Connections: Decodable {
     let groupAffiliation, relatives: String
 }
 
-struct Images {
+struct Images: Decodable {
     let xs, sm, md, lg: String
 }

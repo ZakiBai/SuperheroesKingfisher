@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="10" id="leF-vh-dFE">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="20" minimumInteritemSpacing="0.0" id="leF-vh-dFE">
                             <size key="itemSize" width="150" height="207"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -40,23 +40,31 @@
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="186"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                    <integer key="value" value="10"/>
+                                                    <integer key="value" value="15"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="YJs-Qo-ddd">
+                                            <rect key="frame" x="65" y="83" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Pqx-Y0-26d" secondAttribute="trailing" id="CKY-1m-ISX"/>
+                                        <constraint firstItem="YJs-Qo-ddd" firstAttribute="centerX" secondItem="ed8-Za-6NJ" secondAttribute="centerX" id="Mkv-x8-sx9"/>
                                         <constraint firstItem="Pqx-Y0-26d" firstAttribute="top" secondItem="L00-TU-6ck" secondAttribute="bottom" id="NyU-0x-bmO"/>
+                                        <constraint firstItem="YJs-Qo-ddd" firstAttribute="top" secondItem="ed8-Za-6NJ" secondAttribute="top" constant="83" id="WbS-9G-Fmv"/>
                                         <constraint firstItem="L00-TU-6ck" firstAttribute="top" secondItem="ed8-Za-6NJ" secondAttribute="top" id="chF-i8-iz2"/>
                                         <constraint firstAttribute="bottom" secondItem="Pqx-Y0-26d" secondAttribute="bottom" id="g9p-Cf-1B6"/>
                                         <constraint firstItem="Pqx-Y0-26d" firstAttribute="leading" secondItem="ed8-Za-6NJ" secondAttribute="leading" id="loL-4w-aM8"/>
+                                        <constraint firstAttribute="trailing" secondItem="YJs-Qo-ddd" secondAttribute="trailing" constant="65" id="ocZ-8w-YHg"/>
+                                        <constraint firstItem="YJs-Qo-ddd" firstAttribute="leading" secondItem="ed8-Za-6NJ" secondAttribute="leading" constant="65" id="q50-ZD-guJ"/>
                                         <constraint firstAttribute="trailing" secondItem="L00-TU-6ck" secondAttribute="trailing" id="ulh-2b-xGn"/>
                                         <constraint firstItem="L00-TU-6ck" firstAttribute="leading" secondItem="ed8-Za-6NJ" secondAttribute="leading" id="zss-FH-Xhx"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="150" height="207"/>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="YJs-Qo-ddd" id="ywx-IE-BVD"/>
                                     <outlet property="heroImage" destination="L00-TU-6ck" id="xxv-PG-Nxx"/>
                                     <outlet property="heroName" destination="Pqx-Y0-26d" id="TLN-Fb-vVH"/>
                                 </connections>
