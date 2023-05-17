@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class MainCollectionViewController: UICollectionViewController {
     
@@ -19,6 +20,7 @@ final class MainCollectionViewController: UICollectionViewController {
 
 
     @IBAction func clearCacheButtonTapped(_ sender: UIBarButtonItem) {
+        
     }
     
     
